@@ -1,0 +1,210 @@
+2014/08/06 14:35:29,291 DEBUG [executionCommandExecutor-2][com.documentum.xms.api.impl.ExecutionStateManager] - commandStarted: Start command [commandId->45ccd936-e9af-4ac7-bb84-0664c17b278f]
+2014/08/06 14:35:29,360  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Starting application deployment
+2014/08/06 14:35:29,363  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Deploying application - app deploy command start
+2014/08/06 14:35:32,013  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Application Name = TRAM
+2014/08/06 14:35:32,023  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Application Package Location = c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\f3f2fda1-0552-42ac-93b7-22761b59061f\payload_d731bfbd-c330-4d30-b033-0af726ea4006_unzipped\bd76e814-23e4-4034-a5cf-d6c12695633f
+2014/08/06 14:35:32,032  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Deploy Method = INCREMENTAL
+2014/08/06 14:35:32,041  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Data Policy = MINIMAL
+2014/08/06 14:35:32,049  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Deploy Env = DEV
+2014/08/06 14:35:32,060  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Environment = xCP-2.1-Dev
+2014/08/06 14:35:32,070  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Validate only  = false
+2014/08/06 14:35:32,083  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Xplore Indexing  = true
+2014/08/06 14:35:33,111 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository DocBroker hostNKXCP21
+2014/08/06 14:35:33,111 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository DocBroker port 1489
+2014/08/06 14:35:33,111 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository Namecorp
+2014/08/06 14:35:33,111 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository username dmadmin
+2014/08/06 14:35:33,115 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository password ***
+2014/08/06 14:35:33,115 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Repository domain 
+2014/08/06 14:35:34,983 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Bam Host NKXCP21
+2014/08/06 14:35:34,983 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Bam Port 7000
+2014/08/06 14:35:36,070 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint Bam sysaccount user dmadmin
+2014/08/06 14:35:36,902 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore Host NKXCP21
+2014/08/06 14:35:36,903 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore Port 9300
+2014/08/06 14:35:36,903 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore index agent port 9200
+2014/08/06 14:35:36,903 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore index agent name null
+2014/08/06 14:35:36,903 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore collection default
+2014/08/06 14:35:36,903 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore domain corp
+2014/08/06 14:35:36,905 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint xPlore password ***
+2014/08/06 14:35:37,673 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint AppHost Host NKXCP21
+2014/08/06 14:35:37,673 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint AppHost Port 8000
+2014/08/06 14:35:37,674 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint AppHost username dmadmin
+2014/08/06 14:35:37,674 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Read from blueprint AppHost password ***
+2014/08/06 14:35:39,490  INFO [executionCommandExecutor-2][com.emc.xcp.installer.util.InstallUtil] - Starting the stripping of Dev war
+2014/08/06 14:35:45,179  INFO [executionCommandExecutor-2][com.emc.xcp.installer.util.InstallUtil] - Finnished stripping of the Dev war 
+2014/08/06 14:35:45,285  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Fax, path=Artifacts/Discovered Metadata/named_entity_fax.discoveredmetadata. Resetting index entry name to named_entity_fax
+2014/08/06 14:35:45,286  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=People, path=Artifacts/Discovered Metadata/named_entity_people.discoveredmetadata. Resetting index entry name to named_entity_people
+2014/08/06 14:35:45,286  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=taskstatuspiclkist, path=Artifacts/Picklists/task_status_picklist.picklist. Resetting index entry name to task_status_picklist
+2014/08/06 14:35:45,286  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=wq_view_filter, path=Artifacts/Picklists/workqueueViewFilter.picklist. Resetting index entry name to workqueueViewFilter
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=task, path=Artifacts/Tasks/OOTBTask.task. Resetting index entry name to OOTBTask
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=ScienceAndEngineering, path=Artifacts/Discovered Metadata/taxonomy_science_and_engineering.discoveredmetadata. Resetting index entry name to taxonomy_science_and_engineering
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Phone, path=Artifacts/Discovered Metadata/named_entity_phone.discoveredmetadata. Resetting index entry name to named_entity_phone
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=PostalAddress, path=Artifacts/Discovered Metadata/named_entity_postal_address.discoveredmetadata. Resetting index entry name to named_entity_postal_address
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=taskwqflagpicklist, path=Artifacts/Picklists/task_wq_flag_picklist.picklist. Resetting index entry name to task_wq_flag_picklist
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Organization, path=Artifacts/Discovered Metadata/named_entity_organization.discoveredmetadata. Resetting index entry name to named_entity_organization
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Place, path=Artifacts/Discovered Metadata/named_entity_place.discoveredmetadata. Resetting index entry name to named_entity_place
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=BusinessUS, path=Artifacts/Discovered Metadata/taxonomy_business_us.discoveredmetadata. Resetting index entry name to taxonomy_business_us
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for HTTP, path=Artifacts/Activity Templates/HTTP_Inbound_-_Step.acttemp. Resetting index entry name to HTTP_Inbound_-_Step
+2014/08/06 14:35:45,287  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from Web Service, path=Artifacts/Activity Templates/WS_Inbound_-_Initiate.acttemp. Resetting index entry name to WS_Inbound_-_Initiate
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for Database, path=Artifacts/Activity Templates/DB_Inbound_-_Step.acttemp. Resetting index entry name to DB_Inbound_-_Step
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Send JMS Message, path=Artifacts/Activity Templates/JMS_Outbound.acttemp. Resetting index entry name to JMS_Outbound
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Call Database Procedure, path=Artifacts/Activity Templates/Database_Stored_Procedure.acttemp. Resetting index entry name to Database_Stored_Procedure
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for Email, path=Artifacts/Activity Templates/Email_Inbound_-_Step.acttemp. Resetting index entry name to Email_Inbound_-_Step
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Upload to FTP, path=Artifacts/Activity Templates/ftp_outbound.acttemp. Resetting index entry name to ftp_outbound
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for JMS, path=Artifacts/Activity Templates/JMS_Inbound_-_Step.acttemp. Resetting index entry name to JMS_Inbound_-_Step
+2014/08/06 14:35:45,288  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from Email, path=Artifacts/Activity Templates/Email_Inbound_-_Initiate.acttemp. Resetting index entry name to Email_Inbound_-_Initiate
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Edit Permissions, path=Artifacts/Activity Templates/edit_permissions.acttemp. Resetting index entry name to edit_permissions
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from HTTP, path=Artifacts/Activity Templates/HTTP_Inbound_-_Initiate.acttemp. Resetting index entry name to HTTP_Inbound_-_Initiate
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from FTP, path=Artifacts/Activity Templates/FTP_Inbound_-_Initiate.acttemp. Resetting index entry name to FTP_Inbound_-_Initiate
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Write to Repository, path=Artifacts/Activity Templates/DQL_Write.acttemp. Resetting index entry name to DQL_Write
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Execute Java Service, path=Artifacts/Activity Templates/Invoke_Java.acttemp. Resetting index entry name to Invoke_Java
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Decision Split, path=Artifacts/Activity Templates/Decision_Split.acttemp. Resetting index entry name to Decision_Split
+2014/08/06 14:35:45,289  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from Repository, path=Artifacts/Activity Templates/DQL_Inbound_-_Initiate.acttemp. Resetting index entry name to DQL_Inbound_-_Initiate
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for Repository, path=Artifacts/Activity Templates/DQL_Inbound_-_Step.acttemp. Resetting index entry name to DQL_Inbound_-_Step
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for Web Service, path=Artifacts/Activity Templates/WS_Inbound_-_Step.acttemp. Resetting index entry name to WS_Inbound_-_Step
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Read from Repository, path=Artifacts/Activity Templates/DQL_Read.acttemp. Resetting index entry name to DQL_Read
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Write to Database, path=Artifacts/Activity Templates/Database_Write.acttemp. Resetting index entry name to Database_Write
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Set Process Data, path=Artifacts/Activity Templates/pdm.acttemp. Resetting index entry name to pdm
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Advanced Publish document, path=Artifacts/Activity Templates/xPression_Publish_Document_-_Advanced.acttemp. Resetting index entry name to xPression_Publish_Document_-_Advanced
+2014/08/06 14:35:45,290  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Publish document, path=Artifacts/Activity Templates/xPression_Publish_Document.acttemp. Resetting index entry name to xPression_Publish_Document
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from Database, path=Artifacts/Activity Templates/DB_Inbound_-_Initiate.acttemp. Resetting index entry name to DB_Inbound_-_Initiate
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Call Stateless Process, path=Artifacts/Activity Templates/call_stateless_process.acttemp. Resetting index entry name to call_stateless_process
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Send HTTP/RESTful Request, path=Artifacts/Activity Templates/http_outbound.acttemp. Resetting index entry name to http_outbound
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Read from Database, path=Artifacts/Activity Templates/Database_Read.acttemp. Resetting index entry name to Database_Read
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Call Process, path=Artifacts/Activity Templates/invokeprocess.acttemp. Resetting index entry name to invokeprocess
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Call Web Service, path=Artifacts/Activity Templates/webservice_outbound.acttemp. Resetting index entry name to webservice_outbound
+2014/08/06 14:35:45,291  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Send Email, path=Artifacts/Activity Templates/smtpoutbound.acttemp. Resetting index entry name to smtpoutbound
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Start from JMS, path=Artifacts/Activity Templates/JMS_Inbound_-_Initiate.acttemp. Resetting index entry name to JMS_Inbound_-_Initiate
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Wait for FTP, path=Artifacts/Activity Templates/FTP_Inbound_-_Step.acttemp. Resetting index entry name to FTP_Inbound_-_Step
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Download from FTP, path=Artifacts/Activity Templates/ftp_read.acttemp. Resetting index entry name to ftp_read
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Signal Parent Process, path=Artifacts/Activity Templates/Signal_Parent_Process.acttemp. Resetting index entry name to Signal_Parent_Process
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Attach Aspect, path=Artifacts/Activity Templates/Attach_Aspect.acttemp. Resetting index entry name to Attach_Aspect
+2014/08/06 14:35:45,292  WARN [executionCommandExecutor-2][com.emc.xcp.artifactmanager.internal.ArtifactIndexer] - resetIndexEntry indexName=Detach Aspect, path=Artifacts/Activity Templates/Detach_Aspect.acttemp. Resetting index entry name to Detach_Aspect
+2014/08/06 14:35:50,909  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Running validate phase
+2014/08/06 14:35:51,041  INFO [executionCommandExecutor-2][com.emc.xcp.artifact.contentanalytics.installer.DiscoveredMetadataPreInstallValidator] - No validation needed document has no discovered metadata
+2014/08/06 14:35:51,461  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Started SearchDeployer 'Validate'
+2014/08/06 14:35:51,472  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - xPlore connection details: host = 'NKXCP21' port = '9300' password = '*****' collection = 'default' domain = 'corp'
+2014/08/06 14:35:51,808  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Index Agent connection details: host = 'NKXCP21' port = '9200' user = 'dmadmin' password = '*****' server name = 'IndexAgent' docbase = 'corp' instance Name = 'nkxcp21_9200_IndexAgent'
+2014/08/06 14:35:53,352  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No index definition is required for this application.
+2014/08/06 14:35:53,363  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No need to update the index definition on xPlore (all subpaths are already defined)
+2014/08/06 14:35:53,374  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No actions are required on xPlore for the application.
+2014/08/06 14:35:53,383  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Finished executing SearchDeployer 'Validate' (Execution time = 1 secs)
+2014/08/06 14:35:53,521  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Finished Running validate phase in....2secs
+2014/08/06 14:35:53,530  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Running pre deploy phase
+2014/08/06 14:35:53,540  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Started SearchDeployer 'PreDeploy'
+2014/08/06 14:35:53,555  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No actions needed during xPlore PreDeploy
+2014/08/06 14:35:53,565  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Finished executing SearchDeployer 'PreDeploy' (Execution time = 0 secs)
+2014/08/06 14:35:53,575  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - Connecting to:http://NKXCP21:8000/TRAM/servlet/InvalidateCache
+2014/08/06 14:35:53,616  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - Connection to:http://NKXCP21:8000/TRAM/servlet/InvalidateCache was true
+2014/08/06 14:35:53,626  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - App Server Cache cleared at the url : http://NKXCP21:8000/TRAM/servlet/InvalidateCache
+2014/08/06 14:35:53,636  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Finished Running pre deploy phase in....0secs
+2014/08/06 14:35:53,646  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Running deploy phase
+2014/08/06 14:35:53,659  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Started executing Repository deployment
+2014/08/06 14:35:53,680  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Started Application deployment into repository
+2014/08/06 14:35:53,695  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'xcpui' deployment
+2014/08/06 14:35:54,075  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'xcpui' deployment
+2014/08/06 14:35:54,088  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'xTensionFunctions' deployment
+2014/08/06 14:35:54,289  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'xTensionFunctions' deployment
+2014/08/06 14:35:54,302  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'xcpcore' deployment
+2014/08/06 14:35:54,505  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'xcpcore' deployment
+2014/08/06 14:35:54,516  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'xcpcommons' deployment
+2014/08/06 14:35:54,686  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'xcpcommons' deployment
+2014/08/06 14:35:54,698  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'DemoToolbox' deployment
+2014/08/06 14:35:55,257  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'DemoToolbox' deployment
+2014/08/06 14:35:55,272  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'EZTheme' deployment
+2014/08/06 14:35:55,472  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'EZTheme' deployment
+2014/08/06 14:35:55,485  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Starting project 'TRAM' deployment
+2014/08/06 14:35:56,253  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'Supporting Documents' post install action
+2014/08/06 14:35:56,268  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.DiscoveredMetadataPostInstaller] - Deploying Discovered Metadata for document 'supporting_document' (installIntent=SKIP, dataPolicy=MINIMAL, deploymentEnv=DEV)
+2014/08/06 14:35:56,294  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.TableDeployer] - Deploying Discovered Metadata tables for docset 'tram_supporting_document' (installIntent=SKIP, dataPolicy=MINIMAL, deploymentEnv=DEV)
+2014/08/06 14:35:56,308  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.AspectDeployer] - Deploying Discovered Metadata aspect for type name 'tram_supporting_document' installIntent=SKIP, dataPolicy=MINIMAL, deploymentEnv=DEV)
+2014/08/06 14:35:56,321  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.DocsetConfigurationDeployer] - Deploying Discovered Metadata configuration file for docset 'tram_supporting_document' (installIntent=SKIP, dataPolicy=MINIMAL, deploymentEnv=DEV)
+2014/08/06 14:35:56,334  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.DocsetDeployer] - Deploying Discovered Metadata docset 'tram_supporting_document' (installIntent=SKIP, dataPolicy=MINIMAL, deploymentEnv=DEV)
+2014/08/06 14:35:56,566  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.DocsetDeployer] - Discovered Metadata docset 'tram_supporting_document' deployed
+2014/08/06 14:35:56,580  INFO [pool-10-thread-1][com.emc.xcp.artifact.contentanalytics.installer.DiscoveredMetadataPostInstaller] - Discovered Metadata deployed for document 'supporting_document'
+2014/08/06 14:35:56,609  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'Supporting Documents' post install action executed...Success
+2014/08/06 14:35:56,623  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'Supporting Documents' post install action executed...Success
+2014/08/06 14:35:56,636  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'Demo ACL' post install action
+2014/08/06 14:35:56,716  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'Demo ACL' post install action executed...Success
+2014/08/06 14:35:56,764  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'Demo ACL' post install action executed...Success
+2014/08/06 14:35:56,784  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'Supporting Documents' post install action
+2014/08/06 14:35:56,903  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'Supporting Documents' post install action executed...Success
+2014/08/06 14:35:56,916  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'Supporting Documents' post install action executed...Success
+2014/08/06 14:35:56,929  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'Create Folder' post install action
+2014/08/06 14:35:56,954  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'Create Folder' post install action executed...Success
+2014/08/06 14:35:56,966  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'Create Folder' post install action executed...Success
+2014/08/06 14:35:56,979  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'base_folder' post install action
+2014/08/06 14:35:57,109  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'base_folder' post install action executed...Success
+2014/08/06 14:35:57,124  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'base_folder' post install action executed...Success
+2014/08/06 14:35:57,139  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Started executing Artifact 'tram_record' post install action
+2014/08/06 14:35:57,296  INFO [pool-10-thread-1][com.emc.xcp.installer.internal.ArtifactPostInstallRunner] - Artifact 'tram_record' post install action executed...Success
+2014/08/06 14:35:57,312  INFO [pool-10-thread-1][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Artifact 'tram_record' post install action executed...Success
+2014/08/06 14:35:57,341  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished project 'TRAM' deployment
+2014/08/06 14:35:57,361  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager$1] - Finished Application deployment into repository
+2014/08/06 14:35:57,438  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Notifying Method Server to Invalidate cache
+2014/08/06 14:35:57,454  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Executing request http://nkxcp21:9080/bpm/servlet/InvalidateCache
+2014/08/06 14:35:57,475  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Response status code: 200
+2014/08/06 14:35:57,488  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Response reason: OK
+2014/08/06 14:35:57,506  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Method Server successfully invalidated cache on http://nkxcp21:9080/bpm/servlet/InvalidateCache
+2014/08/06 14:35:57,519  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Finished executing Repository deployment
+2014/08/06 14:35:57,533  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.RepositoryDeployer] - Repository recipe execution time = '3 secs
+2014/08/06 14:35:57,555  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Started SearchDeployer 'Deploy'
+2014/08/06 14:35:57,573  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No index definition update is needed on xPlore
+2014/08/06 14:35:57,587  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - xPlore Async Indexing: true
+2014/08/06 14:35:57,978  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No index rebuild required.
+2014/08/06 14:35:58,000  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No refeed is required.
+2014/08/06 14:35:58,014  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Finished executing SearchDeployer 'Deploy' (Execution time = 0 secs)
+2014/08/06 14:35:58,027  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.BamDeployer] - Started executing BAM deployment
+2014/08/06 14:35:58,043  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xcpui
+2014/08/06 14:35:58,059  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xcpui
+2014/08/06 14:35:58,123  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:35:58,144  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:35:58,158  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xfn
+2014/08/06 14:35:58,174  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xfn
+2014/08/06 14:35:58,567  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:35:58,586  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:35:58,604  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xcpcomm
+2014/08/06 14:35:58,621  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=xcpcomm
+2014/08/06 14:35:58,659  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:35:58,681  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:35:58,696  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=dtb
+2014/08/06 14:35:58,717  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=dtb
+2014/08/06 14:35:59,108  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:35:59,124  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:35:59,140  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=eztheme
+2014/08/06 14:35:59,158  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=eztheme
+2014/08/06 14:35:59,395  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:35:59,419  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:35:59,436  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM URL = http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=tram
+2014/08/06 14:35:59,455  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - executing request http://NKXCP21:7000/bam-server/admin?datapolicy=MINIMAL&deploymentmethod=INCREMENTAL&deploymentenvironment=DEV&namespace=tram
+2014/08/06 14:36:00,102  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - Response HTTP Status code: 200
+2014/08/06 14:36:00,118  INFO [executionCommandExecutor-2][com.documentum.deployment.util.TomcatAccessUtil] - BAM deployment successful
+2014/08/06 14:36:00,134  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.BamDeployer] - Finished BAM deployment
+2014/08/06 14:36:00,147  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.BamDeployer] - Bam deployer  execution time = 2 secs
+2014/08/06 14:36:00,161  INFO [executionCommandExecutor-2][internal.com.emc.xcp.deployment.deployer.factory.WarDeployerFactory] - Deploying through WAR deployer factory
+2014/08/06 14:36:00,175  INFO [executionCommandExecutor-2][internal.com.emc.xcp.deployment.wardeployer.tcserver.TCServerWarDeployer] - The tcserver manager URL is http://NKXCP21:8000/manager/text
+2014/08/06 14:36:00,190  INFO [executionCommandExecutor-2][internal.com.emc.xcp.deployment.wardeployer.tcserver.TCServerWarDeployer] - The tram-TRAM-1.0.0.war is deploying.
+2014/08/06 14:36:00,203  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - Connecting to:http://NKXCP21:8000/manager/text/deploy
+2014/08/06 14:36:00,221  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - Connection to:http://NKXCP21:8000/manager/text/deploy was true
+2014/08/06 14:36:20,249  INFO [executionCommandExecutor-2][internal.com.emc.xcp.deployment.wardeployer.tcserver.TCServerWarDeployer] - The tram-TRAM-1.0.0.war has deployed.
+2014/08/06 14:36:20,270  INFO [executionCommandExecutor-2][internal.com.emc.xcp.deployment.wardeployer.tcserver.TCServerWarDeployer] - WAR deployer execution time = 20 secs
+2014/08/06 14:36:20,331  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Finished Running deploy phase in....26secs
+2014/08/06 14:36:20,399  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Running upgrade data phase
+2014/08/06 14:36:20,427  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No actions needed during xPlore upgradeData
+2014/08/06 14:36:20,459  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Finished Running upgrade data phase in....0secs
+2014/08/06 14:36:20,485  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Running post deploy phase
+2014/08/06 14:36:20,511  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Started SearchDeployer 'PostDeploy'
+2014/08/06 14:36:20,535  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - No actions needed during xPlore PostDeploy
+2014/08/06 14:36:20,557  INFO [executionCommandExecutor-2][internal.com.emc.xcp.builder.deployment.deployers.SearchDeployer] - Finished executing SearchDeployer 'PostDeploy' (Execution time = 0 secs)
+2014/08/06 14:36:20,581  INFO [executionCommandExecutor-2][com.emc.xcp.deployment.deployer.AbstractWarDeployer] - Application URL: http://NKXCP21:8000/TRAM
+2014/08/06 14:36:20,598  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - Finished Running post deploy phase in....0secs
+2014/08/06 14:36:20,622  INFO [executionCommandExecutor-2][com.emc.xcp.builder.deployment.AppDeploymentManager] - AppDeploymentManager deployedin....41secs
+2014/08/06 14:36:20,646  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Registering deployed application into catalog: environment: xCP-2.1-Dev, name = TRAM, namespace = tram, version = 1.0.0
+2014/08/06 14:36:21,849  INFO [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Deploying application was successful
+2014/08/06 14:36:21,864 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.ApplicationDeploymentCommand] - Cleaning up the files created during deployment
+2014/08/06 14:36:21,864  INFO [executionCommandExecutor-2][com.emc.xms.commands.AbstractExecutionCommand] - CommandRequest ID is com.emc.xms.execution.CommandRequest@17c3a635
+2014/08/06 14:36:21,879 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.AbstractExecutionCommand] - Payload temp path - c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\f3f2fda1-0552-42ac-93b7-22761b59061f\payload_2902d750-193f-43df-be7d-ce0da18eff07.xml
+2014/08/06 14:36:21,879 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.AbstractExecutionCommand] - Work temp folder to be cleaned - c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\f3f2fda1-0552-42ac-93b7-22761b59061f
+2014/08/06 14:36:21,899 DEBUG [executionCommandExecutor-2][com.emc.xms.commands.AbstractExecutionCommand] - Deleted temp folder within work path c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\f3f2fda1-0552-42ac-93b7-22761b59061f successfully 
+2014/08/06 14:36:21,900 DEBUG [executionCommandExecutor-2][com.documentum.xms.api.impl.ExecutionStateManager] - commandFinished: Finish command [commandId->45ccd936-e9af-4ac7-bb84-0664c17b278f]
+2014/08/06 15:11:08,699 DEBUG [tomcat-http--8][com.emc.xms.execution.impl.dto.ExecutionCommandParameters] - Adding payload parameter: [Name: applicationPackageLocation, Value: c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\75f81891-5ede-4f34-b6b8-4e0661133ca4\payload_08a7fb95-2b3f-4275-b47d-83229fbd04bc_unzipped\c7919f04-85f8-4db4-9813-c4a047a59a6e]
+2014/08/06 15:11:08,700 DEBUG [tomcat-http--8][com.emc.xms.execution.impl.dto.ExecutionCommandParameters] - Adding payload parameter: [Name: blueprintPath, Value: c:\tcServer\appsInstance\webapps\xms-agent\WEB-INF\work\75f81891-5ede-4f34-b6b8-4e0661133ca4\payload_0cb41616-4f36-4c73-ac39-72f300d0081e.xml]
