@@ -1,0 +1,51 @@
+-------------- Set Env Variables -------------
+
+C:\Users\Administrator\Geronimo_hadoop\Software_dump\scala-2.11.8\bin
+C:\Users\Administrator\Geronimo_hadoop\Software_dump\sbt-1.3.10\sbt\bin
+C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\bin
+
+setx PATH "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\scala-2.11.8\bin;"
+setx PATH "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\sbt-1.3.10\sbt\bin;"
+setx PATH "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\bin;"
+setx PATH "%PATH%;C:\Program Files\Java\jdk1.8.0_121\bin;"
+
+setx JRE_HOME "C:\Program Files\Java\jdk1.8.0_121\jre"
+setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_121"
+setx PATH "%PATH%;C:\Program Files (x86)\Java\jre6\bin;"
+
+setx SPARK_HOME "C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\spark-2.4.5-bin-hadoop2.7"
+setx HADOOP_HOME "C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop"
+setx SCALA_HOME "C:\Users\Administrator\Geronimo_hadoop\Software_dump\scala-2.11.8"
+
+############################################--------------------- Start - Setup - Spark -------------------------------###############################################################
+
+help :  https://dzone.com/articles/working-on-apache-spark-on-windows
+     :  https://hernandezpaul.wordpress.com/2016/01/24/apache-spark-installation-on-windows-10/
+
+-Download Spark[download the version same as the target env] : https://spark.apache.org/downloads.html
+-Unzip
+-Set PATH variable : setx PATH "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\spark-2.4.5-bin-hadoop2.7\bin;"
+-cmd>spark-shell
+-Download winutils[make sure it matches the target hadoop version ] : https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe
+-create dir \hadoop\bin [ Ex : C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop\bin ]
+-Download winutils 64bit
+-Place the winutils.exe in the above directory [ C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop\bin ] 
+-Validate cmd>winutils , it shouldn't throw error, if yes then the wrong bit is downloaded, there are two versions 64 and 32 bit
+-set HADOOP_HOME [ Ex : setx HADOOP_HOME "C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop" ] 
+cmd>spark-shell
+scala> val textFile = spark.read.textFile("test_spark_install.txt")
+
+
+Note : Error -> The root scratch dir: /tmp/hive on HDFS should be writable. Current permissions are: rw-rw-rw- 
+Refer for code : https://stackoverflow.com/questions/34196302/the-root-scratch-dir-tmp-hive-on-hdfs-should-be-writable-current-permissions
+Fix : 
+cd C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop\bin
+winutils.exe chmod 777 /tmp/hive
+
+Error : java.io.IOException: Failed to delete: C:\Users\Administrator\AppData\Local\Temp\spark-094eb8e7-b7ad-46ac-ae81-c55cef16b7c8\repl-f13b679a-f066-49bc-90e8-850279fdabf5\$line23\$read.class
+Fix : 
+cd C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\hadoop\bin
+winutils chmod -R 777 C:\Users\Administrator\AppData\Local\Temp
+
+
+############################################--------------------- End - Setup - Spark -------------------------------############################################################### 
