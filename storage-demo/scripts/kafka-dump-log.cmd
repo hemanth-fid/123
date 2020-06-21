@@ -1,0 +1,1 @@
+%KAFKA_HOME%\bin\windows\kafka-dump-log.bat --files  C:\Users\Administrator\Geronimo_hadoop\my_learning\kafka\learning_journal\code\sample_code\tmp\kafka-log-0\invoice-0\00000000000000000000.log

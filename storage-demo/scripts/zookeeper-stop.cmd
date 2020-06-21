@@ -1,0 +1,1 @@
+%KAFKA_HOME%\bin\windows\zookeeper-server-stop.bat
