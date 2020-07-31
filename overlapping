@@ -1,0 +1,30 @@
+1)Overlapping Intervals
+
+Times
+X{open, close} ,
+Y{open, close}
+
+rec_type, status, time
+x1, open, 930
+x1, close 1030
+x2, open, 1035
+y1, open, 1040
+y2, open, 1041
+x2, close, 1100
+x3, open, 1110
+x3, close, 1115
+y1, close, 1120
+y2, close, 1121
+
+|---x1, open, 930
+|---x1, close 1030
+|-----x2, open, 1035
+| y1, open, 1040----|
+| y2, open, 1041 ---+---|
+|-----x2, close, 1100 | |
+|---x3, open, 1110 | |
+|---x3, close, 1115 | |
+y1, close, 1120---| |
+y2, close, 1121-------|
+
+Find the pairs of x-type and y-type where they have any time overlap between them.
