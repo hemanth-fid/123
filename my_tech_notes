@@ -1,0 +1,376 @@
+HMN_05072019_1023: Encrypted password, replaced count(*) with count(r_object_id)
+
+Agent exec : 
+
+https://documentum-emc.blogspot.com/2012/04/how-to-unlock-job-in-running-state.html
+https://robineast.wordpress.com/2008/01/17/troubleshooting-agent_exec-garbage-collection/
+https://msroth.wordpress.com/2011/05/15/the-content-server-and-time-zones/ ---> timezone documentum
+
+Download jars using pom.xml : https://jar-download.com/online-maven-download-tool.php
+
+------------------------ Tomcat Setup in Eclipse ----------------
+
+
+
+
+Configure JRE
+1)Window --> Preferences [Search JRE, select the below directory]
+Ex : C:\Program Files\Java\jdk1.8.0_121
+2)Window --> Preferences [Search Compiler]
+Make sure Compiler level is set to atleast the jdk version
+3)Go to Servers view[Window --> Show View]
+Add new server
+select Apache Tomcat x.x
+Click Add [Server Runtime Environment] and select the tomcat home directory[ Ex : C:\Users\Administrator\apache-tomcat-8.0.39 ]
+4)Right click START and STOP
+5)Create Dynamic Web Project[Give any name ,Ex : TestTomcat]
+Right click WebContent --> New --> File --> hello.jsp[Hello !]
+6)Right Click on hello.jsp --> Run on Server
+
+
+
+
+--------------------------------- JDK zip creation-----------------------------
+
+
+Unzip the jdk contents
+cd <unzipped_directory>
+cd .rsrc\1033\JAVA_CAB10
+extrac32 111
+Extract tools.zip directory
+cd .rsrc\1033\JAVA_CAB10\tools\
+for /r %x in (*.pack) do .\bin\unpack200 -r "%x" "%~dx%~px%~nx.jar"
+
+
+
+
+Create working JDK directory (C:\JDK in this case)
+
+Download latest version of JDK from Oracle (for example jdk-7u7-windows-x64.exe)
+Download and install 7-Zip (or download 7-Zip portable version if you are not administrator)
+With 7-Zip extract all the files from jdk-XuXX-windows-x64.exe into the directory C:\JDK
+Execute the following commands in cmd.exe:W
+cd C:\JDK\.rsrc\1033\JAVA_CAB10
+extrac32 111
+Unpack C:\JDK\.rsrc\1033\JAVA_CAB10\tools.zip with 7-zip
+Execute the following commands in cmd.exe:
+cd C:\JDK\.rsrc\1033\JAVA_CAB10\tools\
+for /r %x in (*.pack) do .\bin\unpack200 -r "%x" "%~dx%~px%~nx.jar" (this will convert all .pack files into .jar files)
+Copy all contents of C:\JDK\.rsrc\1033\JAVA_CAB10\tools where you want your JDK to be
+Setup JAVA_HOME and PATH manually to point to your JDK dir and its BIN subdirectory
+
+----------------------- JRE SSL support Eclipse -----------------
+
+Add the below JVM arguments (Window-->JRE-->Edit)
+-Djavax.net.debug=ssl:handshake:verbose
+
+---------------------- JAVA Variables-------------------------------------
+
+
+setx JRE_HOME "C:\Program Files\Java\jdk1.6.0_45\jre"
+setx JAVA_HOME "C:\Program Files\Java\jdk1.7.0_75"
+C:\Program Files\Java\jdk1.7.0_75\bin
+setx PATH "%PATH%;C:\Program Files (x86)\Java\jdk1.7.0_75\jre\bin;"
+
+----------------------------------------------------------------
+
+
+############################Activity Execution Logs#######################
+
+
+To save an execution log when the automatic method runs, select Yes for Save Execution
+Results.
+The system saves the execution results to /Temp/BPM/Method Exec Results folder. If the
+method fails, the system also saves the output to /Temp/BPM/Method Exceptions folder
+
+
+You can configure the dm_DMClean job to delete the output for completed workflows that
+remain in the /Temp/BPM/Method Exec Results folder. Using Documentum Administrator, set
+the argument -clean_wf_method_exec_result to True. The Documentum Administration
+Guide provides details on using the dm_DMClean job.
+
+
+----------------------------------------
+
+
+dfc.tracing.file_creation_mode=user
+dfc.tracing.user_name_filter[0]=<user_name>
+dfc.tracing.user_name_filter[1]=
+dfc.tracing.enable=true 
+dfc.tracing.verbose=true 
+dfc.tracing.max_stack_depth=0 
+dfc.tracing.include_rpcs=true 
+dfc.tracing.mode=compact 
+dfc.tracing.include_session_id=true 
+dfc.tracing.file_creation_mode=standard 
+dfc.tracing.log.level=DEBUG 
+dfc.tracing.file_prefix=bpm_trace
+dfc.tracing.dir=/home/prdadmin/bpmtrace/ 
+dfc.tracing.max_backup_index=99 
+dfc.tracing.max_file_size=100MB
+
+
+
+  dfc.tracing.date_column_width   : -1
+  dfc.tracing.date_format         : 
+  dfc.tracing.dir                 : C:\Documentum\logs
+  dfc.tracing.enable              : F
+  dfc.tracing.file_creation_mode  : standard
+  dfc.tracing.file_override       : 
+  dfc.tracing.file_prefix         : dfctrace
+  dfc.tracing.include_rpc_count   : F
+  dfc.tracing.include_rpcs        : F
+  dfc.tracing.include_session_id  : T
+  dfc.tracing.log.additivity   [0]: F
+                               [1]: F
+  dfc.tracing.log.category     [0]: com.documentum.fc.client.impl.session
+                               [1]: com.documentum.fc.client.impl.connection
+  dfc.tracing.log.level        [0]: DEBUG
+                               [1]: DEBUG
+  dfc.tracing.max_backup_index    : 1
+  dfc.tracing.max_file_size       : 100MB
+  dfc.tracing.max_stack_depth     : 1
+  dfc.tracing.method_name_filter[]: <none>
+  dfc.tracing.mode                : compact
+  dfc.tracing.print_exception_stac: F
+  dfc.tracing.print_stack_on_metho: F
+  dfc.tracing.thread_name_filter[]: <none>
+  dfc.tracing.timing_style        : seconds
+  dfc.tracing.user_name_filter  []: <none>
+  dfc.tracing.verbose             : F
+-------------------------------------------
+
+
+UNREGISTER TABLE dm_dbo.IDOCS_APP_SEC_CONFIG_TBL
+GO
+
+REGISTER TABLE dm_dbo."IDOCS_APP_SEC_CONFIG_TBL" (swbc_col INTEGER)
+GO
+
+UPDATE dm_registered OBJECT set owner_table_permit=15, set group_table_permit=15, set world_table_permit=1 WHERE object_name ='IDOCS_APP_SEC_CONFIG_TBL'
+GO
+
+------------------------------------------
+
+log4j.appender.xcp.file=.\\log\\xcp.log    ---> create in project folder(log)
+log4j.appender.claimsIngest.file=${logDir}/swbc_claims_ingest.log
+
+----------------------------
+
+Unlock job
+
+https://documentum-emc.blogspot.com/2012/04/how-to-unlock-job-in-running-state.html
+
+select r_object_id, a_last_invocation, a_last_completion, a_special_app from dm_job where (((a_last_invocation IS NOT NULLDATE)
+ and (a_last_completion IS NULLDATE)) or (a_special_app = 'agentexec')) and (i_is_reference = 0 OR i_is_reference is NULL)
+ and (i_is_replica = 0 OR i_is_replica is NULL) ;
+
+--> If the above query returns a job , execute the below to update
+
+update dm_job objects set a_special_app='' where object_name='claims_ingest_letters';
+
+
+----------------------------------------------------
+
+Make sure , is selected as the list separator
+Windows 10 > Control Panel > Clock, Language and Region > Region: Change date, time or number formats > Additional Settings > Numbers > List Separator
+
+Each Cell of Column A will be compared with Column B ...if it does not match then print cell A in column C.... 
+Put the below formula in Column C.... 
+
+=IF(COUNTIF(B:B,A1)=0,A1,"")
+
+=IF(COUNTIF(B:B~A2)=0~A2~"")
+
+
+
+
+=IF(COUNTIF($B$2:$B2,B2)>1,"Duplicate","")
+
+
+=IF(COUNTIF(B:B,A2)=0,A2,"")
+
+--------------------- Job Reports --------------------
+	
+
+select r_object_id,r_modify_date,r_content_size,object_name from dm_document (all) where object_name like 'LDAP%' and folder ('/System/Sysadmin/Reports', descend) order by r_modify_date desc ENABLE (RETURN_TOP 10, OPTIMIZE_TOP 10);
+
+-----------------------------------------------------------------
+DFC Encrypt/Decrypt password
+
+Run the below commands
+
+cd C:\Users\hemanth.muppalanara\Geronimo\SWBC\Misc_junk\EncryptDecryptPass7x\EncryptDecryptPass7x\Source
+LoadSettings.bat   [ Edit and check the dfc and java classpath ]
+java EncryptDecryptPass7x encrypt DCTMadmin
+java EncryptDecryptPass7x decrypt "<password>"
+
+java EncryptDecryptPass7x decrypt "AAAAELK6rbfUmyjIeUfc87X8M/QMvRbdEoODrygtrNdONnkk"
+
+----------------- dfc registry setting for checkout,checkin and cancel checkout ------------------
+
+Registry Emulation
+==================
+On Windows clients, DFC uses the system registry to keep track of files
+checked out or exported to the client machine. On Unix systems, DFC keeps this
+information in a file on the file system. DFC sets this mode automatically,
+but you can use the following properties to specify using the file method on
+Windows systems or to specify the file location on any system. DO NOT use file
+mode with Documentum Desktop.
+
+
+Absolute path to the registry file (if the registry mode is "file").
+
+dfc.registry.file = ${dfc.data.user_dir}/documentum.ini
+
+
+The type of registry implementation to use. If the value is "windows" then the
+Windowsregistry is used to store registry data. If the value is "file" then a
+file is used to store registry data.
+valid values: windows,file
+
+dfc.registry.mode = file
+
+
+Interval in minutes before relationship schema expires, forcing
+reinitialization
+min value:  1, max value: 2147483647
+
+dfc.relationship.schema_expiration_interval = 30
+
+#dfc.data.user_dir=D://Tomcat//Tomcat7_XCP_BAM_PPIClaims//Documentum
+#dfc.registry.file = ${dfc.data.user_dir}//documentum.ini
+#dfc.registry.mode=file
+
+
+--------------------------
+
+
+select distinct transaction_status from itk_transaction where r_creation_date>=date('01/01/2018 00:00:00','mm/dd/yyyy hh:mm:ss') and r_creation_date<=date('04/19/2019 00:00:00','mm/dd/yyyy hh:mm:ss');
+
+
+---------------------
+
+
+The number of worker sessions available to execute automatic activities is
+controlled by the wf_agent_worker_threads attribute value in the server config
+object. By default, this value is set to 3. You can reset the value to any positive
+number to a maximum of 1000.
+
+Use Documentum Administrator to change the value. You must stop and restart
+Content Server for your change to take effect. Reinitializing the server does not
+make the change effectiv
+
+
+------------------------ BPM ----- ------------
+
+
+select a.r_queue_item_id,a.r_act_seqno,a.r_object_id as workitem_id,a.r_runtime_state as workitem_runitme_state,a.r_performer_name as performer, b.object_name as activity_name,a.r_creation_date as workitem_creation_date from dmi_workitem a, dm_activity b where a.r_workflow_id ='4d020af1812fbe28'  and a.r_act_def_id=b.r_object_id order by a.r_creation_date asc;
+
+
+select count(r_object_id) from dm_activity where r_object_id IN (select r_act_def_id  from  dm_process where r_object_id='4b020af181b09625 ') ;
+
+
+
+select distinct r_workflow_id from dmi_package where any r_component_id='0809fbf280177bb8';
+
+select distinct r_workflow_id from dmi_package where any r_component_id=(select r_object_id from itk_transaction where r_creation_date >date(today));
+
+
+select r_workflow_id,r_component_id,r_package_name from dmi_package where any r_component_id='09020af5c3e085f7' order by i_acceptance_date desc;
+
+select r_component_id,r_package_name,r_component_name from dmi_package where r_workflow_id='4d020af18127061b' order by i_acceptance_date desc;
+
+4d020af18126f055
+
+
+select * from dm_process where system_name like 'itc%' and object_name NOT like 'xcp%';
+
+
+select * from dm_activity where r_object_id IN (select r_act_def_id  from  dm_process where r_object_id='4b020af181b09625 ') ;
+
+select i_all_users_names,group_name  as vbytertteiiureuie from dm_group where  any i_all_users_names like 'PPIClaimsTest1';
+
+select claim_num,count(*) from swbc_ppi_claim group by claim_num order by 2 desc;
+
+------------------------------------------------------------
+
+
+select * from dm_audittrail where audited_obj_id='09020af183c5fdb7' order by time_stamp asc;9/25/2019
+
+select * from dm_audittrail where audited_obj_id='0902757580a41baf' and time_stamp>date('06/29/2015 09:00:00','mm/dd/yyyy hh:mm:ss') and time_stamp<=date('06/29/2015 09:27:00','mm/dd/yyyy hh:mm:ss');
+
+
+select * from dm_audittrail where event_name='dm_addpackage' and id_5 ='09020af5c293f7c7' order by time_stamp asc;
+
+select t.name,r.event,r.user_name from dmi_registry r, dm_type t where r.is_audittrail = 1 and t.r_object_id = r.registered_id;
+dm_all_workflow
+
+
+select * from dm_audittrail where event_name='dm_all_workflow' ENABLE(RETURN_TOP 10);
+a
+select attr_name from dmi_dd_attr_info where type_name='pic_claims_transaction' and attr_name NOT IN (select attr_name from dmi_dd_attr_info where type_name='dm_sysobject');
+
+
+
+fetch,c,09001b5a806d4380
+unlink,c,09001b5a806d4380,0c001b5a80000105
+save,c,09001b5a806d4380
+
+
+09020af183c55380
+09001b5a806d4380
+
+select * from dmc_wfsd_element where workflow_id='4d020af18123f3b3';
+
+select * from itk_cognasys_auto where r_creation_date>=date(today);
+
+
+describe 
+
+
+select event_name,count(*) from dm_audittrs
+execquery,s0,F,EXECUTE do_method WITH method = 'claims_ingest_letters_checks', SAVE_RESULTS = true, ARGUMENTS = '-docbase_name PPIClaims.PPIClaims -user_name dmadmin -job_id 0809fbf180183d54 -method_trace_level 10'
+
+
+FOLDER ('/Temp', '/Temp/test_folder_1', '/System') ENABLE(CONVERT_FOLDER_LIST_TO_OR)
+
+----------------------------------------------------
+
+update itk_as400_output object set b_company='ALLSTATE',set b_policy_no='000001234567',set b_insur_type='C',set b_begin_date=date('12/1/2016 12:00:00 AM','mm/dd/yyyy hh:mm:ss'),set b_end_date=date('nulldate'),set b_comp_deduct=500,set b_coll_deduct=500,set b_lienholder_name='YOUR CREDIT UNION',set b_agent_name='DWAYNE JOHNSON',set b_agent_zip='',set b_agent_phone='2101234567',set b_impairment_code='L',set b_agent_fax='' where r_object_id='08020af183c647b2';
+
+----------------------------------
+
+
+
+
+
+
+Create Process Data                                                                                                                                                                                                                                              5/1/2019 17:03:14       
+0000000000000000  1            4a020af1845ebd1b  2                       swbc_bpm                                                                                                                                                                                                                                                         Recognition and Descisioning                                                                                                                                                                                                                                     5/1/2019 17:03:29       
+0000000000000000  2            4a020af1845ebd1c  2                       swbc_bpm                                                                                                                                                                                                                                                         Is UTL                                                                                                                                                                                                                                                           5/1/2019 17:03:47       
+0000000000000000  3            4a020af1845ebd1f  1                       swbc_bpm                                                                                                                                                                                                                                                         Evaulate Exception 
+
+
+
+
+Recognition and Descisioning
+
+
+
+
+
+select loan_number,r_object_id, transaction_id, transaction_status, account_number, scan_id, impairment_code,loan_number from itk_cognasys_auto where r_object_id IN ('09020af6850fcd4e','09020af6850fcd46','09020af6850fc881','09020af6850fcd47','09020af6850fcd48','09020af6850fb753','09020af6850fcd51','09020af6850fb767','09020af6850fb754','09020af6850fcd52','09020af6850fb767','09020af6850fc880','09020af6850fcd4f','09020af6850fc882','09020af6850fcd50','09020af6850fd271','09020af6850fb756') and loan_number IN ('0000254460.0020','0000254495.0020','000580478100020','000008101720044','000008101720117','000008101720613');
+
+
+000008101720613
+
+
+000580466500020
+
+
+
+INSERT INTO [dbo].[ppi_temp_mig] ([src_obj_id] ,[src_obj_type] ,[src_claim_no] ,[des_obj_id] ,[des_path] ,[des_obj_type] ,[des_unique_id]) VALUES (," + "'" + sobjtype + "'" + "," + "'" + claimno + "'" + "," + "'" + desobjid + "'" + "," + "'" + targetpath + "'" + "," + "'" + destype + "'" + "," + "'" + unisrc + "'" + ")
+
+
+INSERT INTO dbo.ppi_temp_mig (src_obj_id,src_obj_type,src_claim_no,des_obj_id,des_path,des_obj_type,des_unique_id,status,error_message) values('<src_obj_id>','<src_obj_type>','<src_claim_no>','<des_obj_id>','<des_path>','<des_obj_type>','<des_unique_id>','<status>','<error_message>')
