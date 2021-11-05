@@ -1,0 +1,47 @@
+java_dataflow_bucket
+
+
+mybeamdemo:finance
+
+
+mvn compile exec:java \
+-Dexec.mainClass=com.harland.example.batch.BigQueryImportPipeline \
+-Dexec.args="--project=mybeamdemo \
+--bucketUrl=gs://java_dataflow_bucket \
+--bqTableName=mybeamdemo:finance \
+--runner=DataflowRunner \
+--region=europe-west1 \
+--stagingLocation=gs://java_dataflow_bucket/stage/ \
+--tempLocation=gs://java_dataflow_bucket/temp/"
+
+java -cp target/google-cloud-dataflow-java-examples-all-bundled-manual_build.jar \
+com.google.cloud.dataflow.examples.WordCount \
+--project=<YOUR CLOUD PLATFORM PROJECT ID> \
+--stagingLocation=<YOUR CLOUD STORAGE LOCATION> \
+--runner=BlockingDataflowPipelineRunner
+
+
+export GOOGLE_APPLICATION_CREDENTIALS="my/path/dataflow-test.json"
+setx GOOGLE_APPLICATION_CREDENTIALS "C:\Users\Administrator\Downloads\mybeamdemo-75dca6334671.json"
+
+mvn compile exec:java  -Dexec.mainClass=com.harland.example.batch.BigQueryImportPipeline  -Dexec.args="--project=mybeamdemo  --bucketUrl=gs://java_dataflow_bucket --bqTableName=mybeamdemo:finance.transactions --runner=DataflowRunner --region=us-east4 --stagingLocation=gs://java_dataflow_bucket/stage/ --tempLocation=gs://java_dataflow_bucket/temp/"
+
+mvn compile exec:java  -Dexec.mainClass=com.amex.ngdp.dataflow.batch.BigQueryIngestPipeline  -Dexec.args="--project=mybeamdemo  --bucketUrl=gs://java_dataflow_bucket --bqTableName=mybeamdemo:finance.transactions --runner=DataflowRunner --region=us-east4 --stagingLocation=gs://java_dataflow_bucket/stage/"
+
+
+java -cp C:\Users\Administrator\Geronimo_hadoop\gcp_wrkspace\gcp_demo_pipelines\target\demo-beam-pipelines-bundled-0.1.jar com.amex.ngdp.dataflow.batch.BigQueryIngestPipeline --project=mybeamdemo  --bucketUrl=gs://java_dataflow_bucket --bqTableName=mybeamdemo:finance.transactions --runner=DataflowRunner --region=us-east4 --stagingLocation=gs://java_dataflow_bucket/stage/
+
+mvn compile exec:java  -Dexec.mainClass=com.amex.ngdp.dataflow.batch.BigQueryIngestPipeline  -Dexec.args="--project=mybeamdemo  --bucketUrl=gs://java_dataflow_bucket --bqTableName=mybeamdemo:finance.transactions --runner=DataflowRunner --region=us-east4 --stagingLocation=gs://java_dataflow_bucket/stage/"
+
+
+
+
+setx "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;"
+
+setx PATH "%PATH%;C:\Users\Administrator\Geronimo_hadoop\Software_dump\apache-maven-3.5.4-bin\apache-maven-3.5.4\bin;"
+
+
+setx PATH "C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jre1.8.0_121\bin;C:\Users\Administrator\Geronimo_hadoop\cca\scala\scala-2.11.8\scala-2.11.8\bin;C:\Users\Administrator\Geronimo_hadoop\Software_dump\sbt-1.3.10\sbt\bin;C:\Users\Administrator\Geronimo_hadoop\Software_dump\spark-2.4.5-bin-hadoop2.7\spark-2.4.5-bin-hadoop2.7\bin;C:\Program Files\Java\jdk1.8.0_121\bin;"
+
+setx PATH "C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd"
+
