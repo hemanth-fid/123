@@ -1,0 +1,228 @@
+NXQL : https://doc.nuxeo.com/nxdoc/nxql/
+
+Nuxeo Studio :  the Nuxeo Platform configuration SaaS application.
+
+If you wish to discover the existing schemas of the Nuxeo Platform, you can take a look at the
+Nuxeo API playground by going to nuxeo.github.io/api-playground. It will connect you to a live
+repository using the Nuxeo REST API.
+
+In Nuxeo Platform, documents can either be accessed through their ID, or through their path.
+
+Admistration screen --> 
+
+-----------------------------------------------
+
+You now have access to Nuxeo Online Services: Nuxeo Studio, for easy customization of the Nuxeo Platform, Nuxeo Online Services portal to get support and updates, and Nuxeo Marketplace for ready-to-install plugins and packages that will enable you to easily add features to your Nuxeo application.
+
+
+
+-------------------- Inatall --------------------------------
+
+https://doc.nuxeo.com/nxdoc/installation/
+
+https://connect.nuxeo.com/nuxeo/site/connect/dashboard --> Get Token
+https://connect.nuxeo.com/nuxeo/site/connect/distributions --> software downloads
+https://doc.nuxeo.com/nxdoc/tomcat-server-zip/ --> Install windows 
+
+
+------------------------ token -------------------------------------
+
+9d0ecd6de0079ebb4819140f8b0e589d1550bec76e04c13518d5da933af403d4 --> platform
+
+
+----------------------------------
+
+Advanced Search :
+
+the NXQL query editor should be used from the Admin menu.
+
+
+-------------------------------------------
+
+Read, Write and Everything. Each permission is composed of a list
+of authorized actions, described here
+There are two particular cases:
+- If a user is not listed in the ACL, then it means he has no permissions on the document.
+- If a user is listed more than once in the ACL, then the higher permission is taken by
+default
+
+
+Permissions defined locally
+Permissions inherited from upper levele(parent folder)
+permissions assigned to extrenal users : 
+	the user need not be present in the repository ,simply by entering their email address and permission details: ,Ex: exchange documents with people outside of your organization,the external user receives an email with a personalized and unique
+	URL, containing the connection parameter
+
+
+Security Policy : (xml documets )
+
+	The Security Policy Service provides
+an extension point to plug custom security policies that do not rely on the standard ACLs for
+security. For instance, it can be used to define permissions according to the document
+metadata, or information about the logged in user.
+
+-------------------------------------------------------------------------------------
+
+
+-A Java Virtual Machine to run the Nuxeo platform
+-A blobstore to keep all binary files uploaded in the Nuxeo repository, which can be
+hosted on a local file system, a shared storage area or in the Cloud with Amazon S3 or
+Azure, for example
+-A database to store all the document properties, like the creation date or the document
+title, but also its folder location, its permissions and associated workflow tasks. These
+are stored inside a database or in a NoSQL database.
+-A search engine that generates indexes from document properties and can perform
+searches. The indexes are binaries which are stored by default in the Elasticsearch
+engine. Elasticsearch also stores all event history, known as audits.
+-A task queue component to perform work, asynchronously, outside of a user request, in
+the background. In this case, Nuxeo usually works with Redis
+-All the related software which is either embedded or externalized to provide additional
+services on documents, such as document preview, thumbnail generation, metadata
+extraction or conversions.
+-Aynschronous jobs are managed by nuceo streams and kafka
+
+-------------------------------------------------------------------------------------
+
+
+Every element of a Nuxeo repository is called a “document" (just like we call object in dctm)
+
+When you drag and drop the picture into a folder, and attach properties, we identify four major components :
+
+-The binary file corresponding to the 793 kilobits of data is called a blob . Blobs are stored
+ inside a file system. Its path is the value of the nuxeo.data.dir property in the nuxeo.conf
+ file.
+-The document properties, like the creation date or the document title, but also its folder
+ location, its permissions and associated workflow tasks represent the document
+ structure . These are stored inside the database or in a NoSQL database. The more
+ properties you set on a document, the more space it takes.
+-In order to perform searches and improve Nuxeo performance, the Nuxeo platform
+ creates indexes . The indexes are binaries which are stored by default in the
+ Elasticsearch engine. So this also takes up a bit of space.
+-Finally, you will find all event history, also known as audits . It lists who has performed
+  what particular action at which moment in time for a given document. Audits are stored in
+ the database. Adding many audit listeners highly impacts the database’s storage as well
+ as the Nuxeo Platform performance.
+
+
+
+------------------- Import -----------------
+
+Manual import (low volumetry) : default user interface Web UI.
+Nuxeo Drive (middle volumetry, no property) : It is best suited if you have files which don't have any properties to fill in. The import is multi-threaded and can be paused at any moment. Since it is installed on your desktop, it’s easy to reproduce any complex						      folder structure.
+Nuxeo CSV and Nuxeo Scan Importer (middle volumetry, documents with properties) : -Nuxeo CSV is a Nuxeo marketplace addon that lets users bulk import documents in the Nuxeo Platform using a CSV file in the Web UI interface
+										  -Nuxeo Scan importer behaves in a similar way, except it doesn’t provide any user interface and uses XML files instead of CSV files. In this scenario, it is important to know the    files should stay on a file system mounted on the Nuxeo server.
+
+										  Nuxeo CSV handles :
+												- Documents with or without binaries
+												- Tree folder structure replication
+												- Multivalued metadata
+												- And complex properties
+									         CSV plugin  :
+											-Download in Nuxeo marketplace or nuxeoctl command line script.
+											-Need to indicate in the nuxeo.conf file where your source files(csv files) are located.
+											-Create a simple XML extension in your Studio project, indicating which document types are eligible for the CSV import
+										
+										Then initialize the CSV file by adding the properties you need to import to the first line.
+										Let’s focus on this part:
+										- There are some mandatory properties, such as the name and the document type.
+										- The rest of the properties are formatted in xpath format. You can add multivalued properties, and even complex properties. Complex properties should be in JSON format.	
+										- Make sure you’ve respected the formatting rules
+										- Then, add as many lines as there are documents to import. Each property should be separated by a comma, obviously, with the values between quotes
+										- Import your document from the CSV import action in Web UI.
+										Sample data : "name","type","product:price","product:reference","product:season","file:content"
+	                       								      "name1","product","100$","spring","c:/myFIles/shoes.jpg".
+										-Navigate to my import folder, click on the CSV import action, select my CSV file, and launch the import.
+Nuxeo Bulk Importer (high volumetry, performance)  : The Nuxeo Bulk Document Importer is an importer framework provided as an addon that enables mass document import in a Nuxeo repository. A single HTTP query launches a full,multi-threaded import from the server  file system.
+				The document type to apply to folders and files
+				 -The location of the filesystem to import and its target path in the Nuxeo repository
+				 -The batchsize
+				 -The number of threads.
+				 Finally, you should consider all the options offered by the Bulk Importer:
+				  -For simple use cases, you can launch the standard Bulk Importer directly. You can use a third-party stateless HTTP client with HTTP Basic Authentication, a browser with an active Nuxeo session or the bulk importer webpage.
+				  -If you have a more complex import logic, then you are free to create your custom importer with the nuxeo-importer-core component, embedded in your custom JAVA-based application.
+
+Nuxeo REST API (high volumetry, performance) : Finally, you can use Nuxeo REST API if you need to implement importing logic.
+Nuxeo Stream importer :  uses kafka
+
+
+
+
+
+
+
+
+
+-------------------------------
+
+
+Nuxeo Studio Designer :  used create a layout(UI : buttons,links,link)
+Nuxeo Studio Modeler :  used to define object model,workflow tasks
+
+--------------------- Content Model ----------------
+
+Schemas : can be independent or shared(inheritance)
+
+Create Independent schemas : 
+
+Modeler -> Document Types -> claim(type name)
+Modeler -> Schemas -> policy(schema name) ---> add this to the claim type to inherit the policy schema
+
+data type : directory -> picklist
+
+Vocabulary : picklists
+Vocabulary creation policy : “always”  --> dev (vocabulary will be reset everytime we deploy)
+			      “don't override existing values” -> prod(if vocab exists then no change will be made in the nuxeo platform)
+			      “never” --> does nothing
+
+
+As soon as your configuration is deployed, the vocabulary entries can also be managed by
+members of the power users or administrator groups, by going into the Administration
+screen .
+
+In Studio, you can choose from three policies when creating a vocabulary. Selecting the
+“always” policy is the most appropriate while developing the application: every time your
+configuration is deployed, anything that was changed in Studio will be available because the
+vocabulary will be completely reset. Changes made in Nuxeo Platform by users, however,
+will be lost.
+The “don't override existing values” policy works the other way around. If the vocabulary
+exists, then no change made in Studio will be reflected on Nuxeo Platform's side; but users
+will be free to manage it in Nuxeo Platform as they wish to. This setting is recommended
+when your application is about to go live or is live already.
+Finally, the “never” policy doesn't do anything, as its name indicates. It should be chosen
+when a vocabulary is kept for historical reasons but has no more relevant purpose in the
+application.
+
+
+-----------------------------------------------
+
+
+Document
+   |
+ File
+  |
+Invoice
+
+
+---------------------------- ACL ----------------------------------
+
+SELECT * FROM Document WHERE ecm:acl/*1/principal = 'bob'
+                         AND ecm:acl/*1/grant = 1
+                         AND ecm:acl/*1/permission IN ('Browse', 'Read', 'ReadProperties', 'ReadWrite', 'ReadRemove', 'Everything'
+
+
+--------------------------------------------------------------------
+
+
+	Nuxeo Server
+  
+  Database   BlobStore(S3,Filesystem,box)
+
+----------------------------------------
+
+
+Metadata :
+
+There are two implementations available : 
+
+VCS(Visibility content storage) ---> Stores data in RDBMS
+DBS(Database storage)  --> Stores data in MongoDB [Best perfomance]
